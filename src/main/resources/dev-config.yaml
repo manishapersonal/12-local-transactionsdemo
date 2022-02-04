@@ -1,0 +1,10 @@
+db:
+  host: "0.0.0.0"
+  port: "1433"
+  instance: "LAPTOP-LE4O67B8\\SQLEXPRESS"
+  user: "mulesoftuser"
+  password: "Mule*12345"
+  name: "Mulesoft"
+  
+  
+  

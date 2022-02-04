@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties"
+	xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns:vm="http://www.mulesoft.org/schema/mule/vm"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:os="http://www.mulesoft.org/schema/mule/os" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd 
+http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/current/mule-vm.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/os http://www.mulesoft.org/schema/mule/os/current/mule-os.xsd
+http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd">
+	<db:config name="Database_Config" doc:name="Database Config" doc:id="c4986a61-d91c-4691-82a4-987b18055d48" >
+		<db:mssql-connection host="${db.host}" instanceName="${db.instance}" port="${db.port}" databaseName="${db.name}" user="${db.user}" password="${db.password} ">
+		</db:mssql-connection>
+	</db:config>
+	<configuration-properties doc:name="Configuration properties" doc:id="02254537-b7f1-4027-b6af-82030fad0a98" file="${mule.env}-config.yaml" />
+	<!-- <secure-properties:config name="Secure_Properties_Config" doc:name="Secure Properties Config" doc:id="3fb393c5-8371-4af2-a546-942090b95fcd" file="dev-config.properties" key="e" >
+		<secure-properties:encrypt algorithm="Blowfish" />
+	</secure-properties:config>
+ -->
+
+</mule>
